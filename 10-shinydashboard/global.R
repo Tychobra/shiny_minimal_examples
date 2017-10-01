@@ -1,5 +1,7 @@
 library(shiny)
 library(shinydashboard)
+library(shinyjs)
 library(highcharter)
 library(ggplot2)
-
+library(shinyWidgets)
+library(webshot)

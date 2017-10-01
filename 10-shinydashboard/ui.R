@@ -1,6 +1,25 @@
-header <- dashboardHeader()
+header <- dashboardHeader(
+  tags$li(
+    class = "dropdown",
+    # place inside div to avoid default :hover, :focus, and :active behavrior
+    div(
+      class = "camera",
+      tags$a(
+        id = "take_screen_shot", 
+        class = "btn btn-default shiny-download-link camera", 
+        href = "", 
+        target = "_blank", 
+        download = NA, 
+        icon("camera"), 
+        label = "",
+        style = "margin: 10px; padding: 4px 10px; color: #333"
+      )
+    )
+  )
+)
 
 sidebar <- dashboardSidebar(
+  useShinyjs(),
   sidebarUserPanel("User Name",
                    subtitle = a(href = "#", icon("circle", class = "text-success"), "Online"),
                    # Image file should be in www/ subdir
@@ -26,6 +45,7 @@ body <- dashboardBody(
       "dashboard",
       fluidRow(
         tabBox(
+          width = 9,
           tabPanel(
             title = "Panel 1",
             fluidRow(
@@ -51,6 +71,13 @@ body <- dashboardBody(
                 )
               )
             )
+          )
+        ),
+        box(
+          width = 3,
+          radioGroupButtons(
+            inputId = "btn",
+            choices = c("one", "two")
           )
         )
       )
