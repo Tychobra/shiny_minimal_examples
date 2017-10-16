@@ -16,9 +16,10 @@ dashboardPage(
         ##Rendering the datatable
         column(
           12,
-          dataTableOutput("Main_table")
+          dataTableOutput("main_table")
         )
       )
-    )
+    ),
+    tags$script(src = "custom.js")
   )
 )
