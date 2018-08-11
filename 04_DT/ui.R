@@ -1,0 +1,15 @@
+fluidPage(
+  fluidRow(
+    column(
+      12,
+      h1("DT"),
+      br()
+    )
+  ),
+  fluidRow(
+    column(
+      12,
+      DTOutput("my_table")
+    )
+  )
+)
