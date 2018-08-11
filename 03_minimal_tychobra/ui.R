@@ -1,0 +1,19 @@
+fluidPage(
+  fluidRow(
+    column(
+      12,
+      h1("Title")
+    ),
+    br()
+  ),
+  fluidRow(
+    column(
+      3,
+      h2("Sidebar")
+    ),
+    column(
+      9,
+      h1("Main Content")
+    )
+  )
+)

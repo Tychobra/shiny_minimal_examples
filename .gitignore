@@ -4,3 +4,4 @@
 .Ruserdata
 *.Rproj
 webshot.png
+.DS_Store
